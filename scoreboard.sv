@@ -10,8 +10,8 @@ ECE 593: Fundamentals of Presilicon Validation Project
 class scoreboard extends uvm_test;
 	`uvm_component_utils(scoreboard)// registering the calss with the factory
 	 
-	 bit [7:0]trans_data[$];
-	 fifo_seq_item trans[$];
+	bit [7:0]trans_data[$];//expected
+	fifo_seq_item trans[$]; // actual 
 	 uvm_analysis_imp #(fifo_seq_item,scoreboard) scoreboard_port; // creating annalysis port for scoreboard
 
 	 //creating a new constructor for scoreboard class
